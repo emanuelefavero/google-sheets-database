@@ -1,7 +1,17 @@
 import config from '@/utils/poll-config'
 
-function getRandomWidth() {
-  const randomWidths = ['8', '12', '16', '20', '24', '28', '32', '36', '40']
+function getRandomWidthClass() {
+  const randomWidths = [
+    'w-8',
+    'w-12',
+    'w-16',
+    'w-20',
+    'w-24',
+    'w-28',
+    'w-32',
+    'w-36',
+    'w-40',
+  ]
   return randomWidths[Math.floor(Math.random() * randomWidths.length)]
 }
 
@@ -25,7 +35,7 @@ export default function Loading() {
             <li key={index} className='py-2 rounded-lg'>
               <div className='mb-2 w-full flex justify-between'>
                 <span
-                  className={`w-${getRandomWidth()} py-1 font-medium text-text-secondary rounded-lg bg-violet-500 bg-opacity-25 animate-pulse`}
+                  className={`${getRandomWidthClass()} py-1 font-medium text-text-secondary rounded-lg bg-violet-500 bg-opacity-25 animate-pulse`}
                 ></span>
                 <span className='font-bold animate-pulse bg-violet-500 bg-opacity-25 px-2 rounded-lg'>
                   &nbsp;

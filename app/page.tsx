@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import config from '@/utils/poll-config'
 import { useRouter } from 'next/navigation'
+import Loading from '@/app/results/loading'
 
 import submitVote from './submit-vote'
 
@@ -22,6 +23,8 @@ export default function Page({ searchParams }: Props) {
     setIsSubmitting(true)
   }
 
+  if (isSubmitting) return <Loading />
+
   return (
     <>
       <h1>Poll</h1>
@@ -40,14 +43,16 @@ export default function Page({ searchParams }: Props) {
           )
         })}
 
-        <li>
-          <button
-            onClick={() => router.push('/results')}
-            className='select-none'
-          >
-            Results
-          </button>
-        </li>
+        {!isSubmitting && (
+          <li>
+            <button
+              onClick={() => router.push('/results')}
+              className='select-none'
+            >
+              Results
+            </button>
+          </li>
+        )}
 
         {error ? <p>Server error</p> : null}
       </ul>
