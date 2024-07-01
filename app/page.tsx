@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import config from '../utils/poll-config'
+import config from '@/utils/poll-config'
 
 import submitVote from './submit-vote'
 
