@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import config from '@/utils/poll-config'
+import { useRouter } from 'next/navigation'
 
 import submitVote from './submit-vote'
 
@@ -12,6 +13,7 @@ interface Props {
 }
 
 export default function Page({ searchParams }: Props) {
+  const router = useRouter()
   const { error } = searchParams
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -22,19 +24,26 @@ export default function Page({ searchParams }: Props) {
 
   return (
     <>
-      <h1>Vote</h1>
+      <h1 className='font-bold text-4xl mb-4'>Vote</h1>
+
       <ul>
         {config.map((item, index) => {
           const { name, id } = item
 
           return (
-            <li key={index}>
+            <li key={index} className='mb-2'>
               <button onClick={() => handleClick(id)} disabled={isSubmitting}>
                 <span>{name}</span>
               </button>
             </li>
           )
         })}
+
+        <li>
+          <button onClick={() => router.push('/results')} className=''>
+            Just see results
+          </button>
+        </li>
 
         {error ? <p>Server error</p> : null}
       </ul>
