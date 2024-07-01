@@ -17,15 +17,17 @@ export default async function Page() {
         <ArrowLeftShort className='w-7 h-7 fill-violet-500 group-hover:fill-violet-600 group-active:scale-90' />
         Back
       </Link>
-      <ul className='mb-4'>
+      <ul className='mb-4 max-w-72'>
         {votes.results.map((result, index) => {
           const { value, count, percent, max } = result
 
           return (
-            <li key={index} className='py-2'>
-              <div className='mb-2'>
-                <span>{value}</span>
-                <span>{` ${percent}%`}</span>
+            <li key={index} className='py-2 rounded-lg'>
+              <div className='mb-2 w-full flex justify-between'>
+                <span className='font-medium text-text-secondary'>
+                  {value} &nbsp;
+                </span>
+                <span className='font-bold'>{` ${percent}%`}</span>
               </div>
 
               <div
@@ -45,8 +47,6 @@ export default async function Page() {
         })}
       </ul>
       <p> {`${votes.total} votes`}</p>
-
-      <button>Test</button>
     </>
   )
 }
