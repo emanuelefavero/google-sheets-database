@@ -24,14 +24,17 @@ export default function Page({ searchParams }: Props) {
 
   return (
     <>
-      <h1 className='font-bold text-4xl mb-4'>Vote</h1>
+      <h1 className='text-text-primary font-bold text-4xl mb-4'>Poll</h1>
+      <p className='text-text-secondary font-medium mb-6'>
+        Choose an option to submit your vote:
+      </p>
 
-      <ul>
+      <ul className='ml-4'>
         {config.map((item, index) => {
           const { name, id } = item
 
           return (
-            <li key={index} className='mb-2'>
+            <li key={index} className='mb-2 select-none'>
               <button onClick={() => handleClick(id)} disabled={isSubmitting}>
                 <span>{name}</span>
               </button>
@@ -40,7 +43,10 @@ export default function Page({ searchParams }: Props) {
         })}
 
         <li>
-          <button onClick={() => router.push('/results')} className=''>
+          <button
+            onClick={() => router.push('/results')}
+            className='select-none'
+          >
             Just see results
           </button>
         </li>

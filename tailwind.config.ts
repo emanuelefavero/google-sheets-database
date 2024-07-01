@@ -14,6 +14,8 @@ const config: Config = {
         'primary-dark': 'var(--primary-dark)',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        'text-primary': 'var(--text-primary)',
+        'text-secondary': 'var(--text-secondary)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
