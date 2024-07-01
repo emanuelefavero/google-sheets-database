@@ -2,6 +2,12 @@
 
 This project is a simple example of how to use Google Sheets as a database. It uses the Google Sheets API to interact with the database.
 
+> Note: This app is also built with Next.js
+
+#### Screenshot
+
+<img src="screenshot.webp" alt="screenshot" width="600">
+
 ## Tutorial
 
 - Follow this guide to setup this project from scratch: [Google Sheets Database](https://thenewstack.io/how-to-use-google-sheets-as-a-database-with-react-and-ssr/)
