@@ -25,7 +25,7 @@ export default function Page({ searchParams }: Props) {
   return (
     <>
       <h1>Poll</h1>
-      <p className='mb-6'>Choose an option to submit your vote:</p>
+      <p className='mb-6'>What{"'"}s the best breakfast? </p>
 
       <ul className='ml-4'>
         {config.map((item, index) => {
@@ -45,7 +45,7 @@ export default function Page({ searchParams }: Props) {
             onClick={() => router.push('/results')}
             className='select-none'
           >
-            Just see results
+            Results
           </button>
         </li>
 

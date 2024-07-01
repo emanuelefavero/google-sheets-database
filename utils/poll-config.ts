@@ -1,19 +1,19 @@
 const config = [
   {
-    name: 'Frontend Development',
-    id: 'frontend_development',
+    name: 'Eggs and Bacon 🥓',
+    id: 'eggs_and_bacon',
   },
   {
-    name: 'Software Development',
-    id: 'software_development',
+    name: 'Cereals or Oatmeal 🥣',
+    id: 'cereals_or_oatmeal',
   },
   {
-    name: 'Cloud Services',
-    id: 'cloud_services',
+    name: 'Pancakes 🥞',
+    id: 'pancakes',
   },
   {
-    name: 'Machine Learning',
-    id: 'machine_learning',
+    name: 'Just coffee ☕️',
+    id: 'just_coffee',
   },
 ]
 
