@@ -11,10 +11,10 @@ export default async function Page() {
 
       <Link
         href='/'
-        className='text-primary flex items-center max-w-fit pr-2 py-0 rounded-lg hover:text-primary-dark active:scale-90 group
+        className='text-primary flex items-center max-w-fit pr-2 py-0 mb-4 rounded-lg hover:text-primary-dark active:scale-90 group
           transition-transform duration-100 ease-in-out'
       >
-        <ArrowLeftShort className='w-8 h-8 fill-violet-500 group-hover:fill-violet-600 group-active:scale-90' />
+        <ArrowLeftShort className='w-7 h-7 fill-violet-500 group-hover:fill-violet-600 group-active:scale-90' />
         Back
       </Link>
       <ul>
