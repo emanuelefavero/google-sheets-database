@@ -36,3 +36,7 @@ npm run dev
 ```
 
 - Open your browser and go to `http://localhost:3000`
+
+## License
+
+- [MIT](LICENSE.md)
