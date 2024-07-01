@@ -1,5 +1,5 @@
 import Link from 'next/link'
-
+import ArrowLeftShort from '@/components/icons/ArrowLeftShort'
 import getAllVotes from './get-all-votes'
 
 export default async function Page() {
@@ -7,8 +7,12 @@ export default async function Page() {
 
   return (
     <>
-      <Link href='/'>Back</Link>
       <h1>Results</h1>
+
+      <Link href='/'>
+        <ArrowLeftShort />
+        Back
+      </Link>
       <ul>
         {votes.results.map((result, index) => {
           const { value, count, percent, max } = result
