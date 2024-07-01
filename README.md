@@ -4,6 +4,10 @@ This project is a simple example of how to use Google Sheets as a database. It u
 
 > Note: This app is also built with Next.js
 
+## Live Demo
+
+- [google-sheets-database-wine.vercel.app/](https://google-sheets-database-wine.vercel.app/)
+
 #### Screenshot
 
 <img src="screenshot.webp" alt="screenshot" width="600">
