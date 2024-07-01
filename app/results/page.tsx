@@ -17,22 +17,36 @@ export default async function Page() {
         <ArrowLeftShort className='w-7 h-7 fill-violet-500 group-hover:fill-violet-600 group-active:scale-90' />
         Back
       </Link>
-      <ul>
+      <ul className='mb-4'>
         {votes.results.map((result, index) => {
           const { value, count, percent, max } = result
 
           return (
-            <li key={index}>
-              <div>
+            <li key={index} className='py-2'>
+              <div className='mb-2'>
                 <span>{value}</span>
                 <span>{` ${percent}%`}</span>
               </div>
-              <progress value={count} max={max} />
+
+              <div
+                className='relative flex w-40 h-1 bg-violet-500 bg-opacity-25 rounded-full overflow-hidden'
+                role='progressbar'
+                aria-valuenow={count}
+                aria-valuemin={0}
+                aria-valuemax={max}
+              >
+                <div
+                  className='relative flex flex-col justify-center rounded-full overflow-hidden bg-primary text-xs text-white text-center whitespace-nowrap transition duration-500'
+                  style={{ width: `${percent}%` }}
+                ></div>
+              </div>
             </li>
           )
         })}
-        <p> {`${votes.total} votes`}</p>
       </ul>
+      <p> {`${votes.total} votes`}</p>
+
+      <button>Test</button>
     </>
   )
 }
