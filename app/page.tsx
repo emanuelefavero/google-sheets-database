@@ -24,10 +24,8 @@ export default function Page({ searchParams }: Props) {
 
   return (
     <>
-      <h1 className='text-text-primary font-bold text-4xl mb-4'>Poll</h1>
-      <p className='text-text-secondary font-medium mb-6'>
-        Choose an option to submit your vote:
-      </p>
+      <h1>Poll</h1>
+      <p className='mb-6'>Choose an option to submit your vote:</p>
 
       <ul className='ml-4'>
         {config.map((item, index) => {
